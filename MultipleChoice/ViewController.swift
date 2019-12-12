@@ -28,10 +28,11 @@ class ViewController: UIViewController {
     
     @IBAction func Check(_ sender: Any) {
         
-        
-        
+        guard let NumberOfQuestionsString = NumberOfQuestions.text, let QuestionCount = Int(NumberOfQuestionsString), QuestionCount > 0  else {
+            ErrorMessage.text = "Please enter a number"
+            return
     }
     
+  }
 
 }
-

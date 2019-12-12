@@ -61,6 +61,9 @@
                                 <state key="normal" title="Check students answers">
                                     <color key="titleColor" red="0.17398201850902234" green="0.40230409263959388" blue="0.22632866825061576" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="Check:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OJo-vj-d8K"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGL-Y8-X8T">
                                 <rect key="frame" x="20" y="374" width="374" height="31"/>
@@ -81,6 +84,13 @@
                         <color key="backgroundColor" red="0.87494427429999999" green="1" blue="0.73218487779999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="AnswerBox" destination="6cs-bf-jpt" id="7Zu-ON-3rx"/>
+                        <outlet property="CorrectAnswers" destination="OcM-gK-tzZ" id="cRg-4V-t0m"/>
+                        <outlet property="ErrorMessage" destination="RGL-Y8-X8T" id="TRR-cI-S48"/>
+                        <outlet property="NumberOfQuestions" destination="i4b-8E-IQq" id="TCI-99-edF"/>
+                        <outlet property="StudentAnswers" destination="KoX-le-VzW" id="O4Z-7i-tfo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

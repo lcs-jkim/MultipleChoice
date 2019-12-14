@@ -29,7 +29,9 @@ class ViewController: UIViewController {
     
     @IBAction func Check(_ sender: Any) {
         
+        // Clear ErrorMessage and ErrorMessage2 and guard statements
         ErrorMessage.text = ""
+        ErrorMessage2.text = ""
         
         guard let NumberOfQuestionsString = NumberOfQuestions.text, let QuestionCount = Int(NumberOfQuestionsString), QuestionCount > 0  else {
             ErrorMessage.text = "Please enter the number of questions"
@@ -37,7 +39,7 @@ class ViewController: UIViewController {
             
         }
         guard let StudentAnswerString = StudentAnswers.text, StudentAnswerString.count > 0 else {
-            ErrorMessage.text = "Please enter student's answers"
+            ErrorMessage.text = "Please enter the student's answers"
             return
         }
         
@@ -51,6 +53,8 @@ class ViewController: UIViewController {
             ErrorMessage2.text = "are equal"
             return
         }
+        
+        
     
     }
 

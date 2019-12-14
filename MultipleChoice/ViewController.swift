@@ -28,11 +28,28 @@ class ViewController: UIViewController {
     
     @IBAction func Check(_ sender: Any) {
         
+        ErrorMessage.text = ""
+        
         guard let NumberOfQuestionsString = NumberOfQuestions.text, let QuestionCount = Int(NumberOfQuestionsString), QuestionCount > 0  else {
-            ErrorMessage.text = "Please enter a number"
+            ErrorMessage.text = "Please enter the number of questions"
             return
-    }
+            
+        }
+        guard let StudentAnswerString = StudentAnswers.text, let StudentAnswerCount = Int(StudentAnswerString), StudentAnswerCount > 0 else {
+            ErrorMessage.text = "Please enter student's answers"
+            return
+        }
+        
+        guard let CorrectAnswerString = CorrectAnswers.text, let CorrectAnswerCount = Int(CorrectAnswerString), CorrectAnswerCount > 0 else {
+            ErrorMessage.text = "Please enter the correct answers"
+            return
+        }
+        
+        guard QuestionCount == StudentAnswerCount, CorrectAnswerCount == QuestionCount, StudentAnswerCount == CorrectAnswerCount else {
+            ErrorMessage.text = "Please make sure all text fields are equal"
+            return
+        }
     
-  }
+    }
 
 }

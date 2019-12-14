@@ -80,6 +80,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnK-hd-qs5">
+                                <rect key="frame" x="20" y="403" width="374" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.87494427429999999" green="1" blue="0.73218487779999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -88,6 +95,7 @@
                         <outlet property="AnswerBox" destination="6cs-bf-jpt" id="7Zu-ON-3rx"/>
                         <outlet property="CorrectAnswers" destination="OcM-gK-tzZ" id="cRg-4V-t0m"/>
                         <outlet property="ErrorMessage" destination="RGL-Y8-X8T" id="TRR-cI-S48"/>
+                        <outlet property="ErrorMessage2" destination="nnK-hd-qs5" id="EYz-1z-BWw"/>
                         <outlet property="NumberOfQuestions" destination="i4b-8E-IQq" id="TCI-99-edF"/>
                         <outlet property="StudentAnswers" destination="KoX-le-VzW" id="O4Z-7i-tfo"/>
                     </connections>

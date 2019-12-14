@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var StudentAnswers: UITextField!
     @IBOutlet weak var CorrectAnswers: UITextField!
     @IBOutlet weak var ErrorMessage: UILabel!
+    @IBOutlet weak var ErrorMessage2: UILabel!
     @IBOutlet weak var AnswerBox: UITextView!
     
     override func viewDidLoad() {
@@ -35,18 +36,19 @@ class ViewController: UIViewController {
             return
             
         }
-        guard let StudentAnswerString = StudentAnswers.text, let StudentAnswerCount = Int(StudentAnswerString), StudentAnswerCount > 0 else {
+        guard let StudentAnswerString = StudentAnswers.text, StudentAnswerString.count > 0 else {
             ErrorMessage.text = "Please enter student's answers"
             return
         }
         
-        guard let CorrectAnswerString = CorrectAnswers.text, let CorrectAnswerCount = Int(CorrectAnswerString), CorrectAnswerCount > 0 else {
+        guard let CorrectAnswerString = CorrectAnswers.text, CorrectAnswerString.count > 0 else {
             ErrorMessage.text = "Please enter the correct answers"
             return
         }
         
-        guard QuestionCount == StudentAnswerCount, CorrectAnswerCount == QuestionCount, StudentAnswerCount == CorrectAnswerCount else {
-            ErrorMessage.text = "Please make sure all text fields are equal"
+        guard QuestionCount == StudentAnswerString.count, CorrectAnswerString.count == QuestionCount, StudentAnswerString.count == CorrectAnswerString.count else {
+            ErrorMessage.text = "Please make sure all the text fields"
+            ErrorMessage2.text = "are equal"
             return
         }
     
